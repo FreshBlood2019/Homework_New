@@ -1,0 +1,26 @@
+package ProblemsHW;
+
+import java.sql.SQLOutput;
+
+public class ProblemCar02 {
+    public static void main(String[] args) {
+        ProblemCar01 brand1 = new ProblemCar01(3000, 2019L, 20.000);
+        ProblemCar01 brand2 = new ProblemCar01(4000, 2017L, 15.000);
+        ProblemCar01 brand3 = new ProblemCar01(10000, 2018L, 30.000);
+
+        System.out.println(brand3.resolveCarType());
+        System.out.println(ProblemCar01.getRandomCar());
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+}
