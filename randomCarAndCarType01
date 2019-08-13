@@ -1,0 +1,62 @@
+package ProblemsHW;
+
+/* 1. Создать класс Car с 3 полями различных типов,
+ 2 конструкторами, один из которых с параметрами.
+ В классе создать 2 метода, статический и не статический.
+ Один из методов решает по весу машины ее тип: легковой,
+джип, грузовой (через свитч). Второй метод генерирует рандомную машину.
+ */
+
+import java.util.Random;
+
+public class ProblemCar01 {
+    public int carWeight;
+    public long carYear;
+    public double carPrice;
+    public String carModel;
+
+    public ProblemCar01() {
+
+    }
+
+    public ProblemCar01(int weight, long year, double price) {
+        carWeight = weight;
+        carYear = year;
+        carPrice = price;
+    }
+
+    public String resolveCarType() {
+
+        switch (carWeight) {
+            case 3000:
+                carModel = "Passenger car";
+                break;
+            case 4000:
+                carModel = "Jeep";
+                break;
+            case 10000:
+                carModel = "Truck";
+                break;
+            default:
+                carModel = "Default";
+                break;
+
+
+        }
+        return carModel;
+    }
+
+    public static String getRandomCar() {
+        int randNum = (int) Math.random() * 3 + 1;
+        switch (randNum) {
+            case 1:
+                return "BMW";
+            case 2:
+                return "Toyota";
+            case 3:
+                return "Lada";
+        }
+        return null;
+    }
+}
+
